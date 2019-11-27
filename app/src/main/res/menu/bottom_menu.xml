@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bn_exibits_id"
+        android:icon="@drawable/ic_home"
+        android:title="EXIBITS" />
+
+    <item
+        android:id="@+id/bn_videos_id"
+        android:icon="@drawable/ic_home"
+        android:title="VIDEOS" />
+
+    <item
+        android:id="@+id/bn_gallery_id"
+        android:icon="@drawable/ic_home"
+        android:title="GALLERY" />
+
+    <item
+        android:id="@+id/bn_history_id"
+        android:icon="@drawable/ic_home"
+        android:title="HISTORY" />
+
+
+</menu>

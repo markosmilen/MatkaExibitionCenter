@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".ExibitsActivity">
+
+
+    <ImageView
+        android:id="@+id/exibit_cover_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/matka_exibit_cover"/>
+
+
+    <LinearLayout
+        android:id="@+id/exibit_linear_below_cover_id"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="25dp"
+        android:elevation="20dp"
+        android:background="@drawable/curve_background"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Матка Изложбен центар"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_black"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="30dp"
+            android:text="Изложбениот центар Матка е едиствен едукативен центар во Македонија што се бави со енергетски теми. Во него посетителите преку современи интерактивни методи може да научат повеќе за енергијата, нејзината историја, производство, пренос и користење."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="експонати"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textAllCaps="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exibit_recyclerview_horizontal_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,18 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal"
+        android:background="@color/color_overlaybacground"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/logo_en" />
+
+        <Button
+            android:id="@+id/continueButtonID"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/ColorRed"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:textSize="15sp"
+            android:textColor="@color/color_white"
+            android:text="ПРОДОЛЖИ"
+            android:onClick="learnMore"/>
+
+        <!--        <TextView
+                    android:id="@+id/main_title"
+                    android:layout_below="@+id/main_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="EXHIBITION CENTER MATKA"
+                    android:textSize="18sp"
+                    android:textColor="@color/main_text_color"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/main_text"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/main_title"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/main_text_color"
+                    android:text="Electricity is available to us with a “click”, but its evolution is long, brilliant, exceptional. That is why we have created…"/>
+
+                <TextView
+                    android:id="@+id/main_learn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learn more"
+                    android:layout_below="@id/main_text"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/main_text_color"
+                    android:onClick="learnMore"/>
+
+                    -->
+    </RelativeLayout>
+
+</RelativeLayout>
