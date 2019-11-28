@@ -37,7 +37,7 @@
             android:id="@+id/continueButtonID"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:background="@color/ColorRed"
+            android:background="@drawable/main_screen_button_shape"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="100dp"
