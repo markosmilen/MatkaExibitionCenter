@@ -13,12 +13,12 @@
         android:title="VIDEOS" />
 
     <item
-        android:id="@+id/bn_gallery_id"
+        android:id="@+id/bn_history_id"
         android:icon="@drawable/ic_home"
         android:title="GALLERY" />
 
     <item
-        android:id="@+id/bn_history_id"
+        android:id="@+id/bn_contact_id"
         android:icon="@drawable/ic_home"
         android:title="HISTORY" />
 

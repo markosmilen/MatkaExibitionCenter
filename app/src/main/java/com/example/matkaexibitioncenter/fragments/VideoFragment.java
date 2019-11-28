@@ -11,23 +11,20 @@ import androidx.fragment.app.Fragment;
 
 import com.example.matkaexibitioncenter.R;
 
-public class ExibitFragment extends Fragment {
+public class VideoFragment extends Fragment {
+    public static final String TAG = VideoFragment.class.getSimpleName();
 
-    public static final String TAG = ExibitFragment.class.getSimpleName();
-
-    public static ExibitFragment newInstance(){
-        ExibitFragment exibitFragment = new ExibitFragment();
-        return exibitFragment;
+    public static VideoFragment newInstance(){
+        VideoFragment videoFragment = new VideoFragment();
+        return videoFragment;
     }
-
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_exibit, container, false);
+        View view = inflater.inflate(R.layout.fragment_viceo, container, false);
         return view;
     }
-
 
 
 }
