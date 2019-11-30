@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         continueButton = findViewById(R.id.continueButtonID);
 
         videoview = (VideoView) findViewById(R.id.videoview);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.video);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.matka_splash_video);
         videoview.setVideoURI(uri);
         videoview.start();
 

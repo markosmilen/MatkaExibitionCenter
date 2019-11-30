@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.matkaexibitioncenter.R;
+import com.example.matkaexibitioncenter.interfaces.ExibitClickListener;
 import com.example.matkaexibitioncenter.models.ExibitModel;
 
 import java.util.ArrayList;
@@ -20,11 +21,13 @@ public class ExibitsAdapter extends RecyclerView.Adapter<ExibitsAdapter.ExibitsV
     Context context;
     LayoutInflater inflater;
     ArrayList<ExibitModel> exibits;
+    ExibitClickListener listener;
 
-    public ExibitsAdapter(Context context, ArrayList<ExibitModel> exibits) {
+    public ExibitsAdapter(Context context, ArrayList<ExibitModel> exibits, ExibitClickListener listener) {
         this.context = context;
         this.exibits = exibits;
         this.inflater = LayoutInflater.from(context);
+        this.listener = listener;
     }
 
     @NonNull
@@ -55,6 +58,14 @@ public class ExibitsAdapter extends RecyclerView.Adapter<ExibitsAdapter.ExibitsV
             super(itemView);
             exibitimage = (ImageView) itemView.findViewById(R.id.item_exibitcard_img_id);
             exibitTitle = (TextView) itemView.findViewById(R.id.item_exibitcard_title_id);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener != null){
+                        listener.onExibitClicked(exibits.get(getAdapterPosition()));
+                    }
+                }
+            });
         }
     }
 }

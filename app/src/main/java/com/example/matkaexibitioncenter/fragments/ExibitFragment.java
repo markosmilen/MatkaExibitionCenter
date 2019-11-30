@@ -11,13 +11,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.matkaexibitioncenter.ExibitsActivity;
 import com.example.matkaexibitioncenter.R;
 import com.example.matkaexibitioncenter.adapters.ExibitsAdapter;
+import com.example.matkaexibitioncenter.interfaces.ExibitClickListener;
 import com.example.matkaexibitioncenter.models.ExibitModel;
 
 import java.util.ArrayList;
 
-public class ExibitFragment extends Fragment {
+public class ExibitFragment extends Fragment implements ExibitClickListener {
 
     public static final String TAG = ExibitFragment.class.getSimpleName();
 
@@ -36,7 +38,7 @@ public class ExibitFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_exibit, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.exibit_recyclerview_horizontal_id);
         generateExibits();
-        adapter = new ExibitsAdapter(getActivity(), listOfExibits);
+        adapter = new ExibitsAdapter(getActivity(), listOfExibits, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
         return view;
@@ -84,10 +86,12 @@ public class ExibitFragment extends Fragment {
         exibit9.setTitle("Плазма топка");
         listOfExibits.add(exibit9);
 
-
-
-
     }
 
 
+    @Override
+    public void onExibitClicked(ExibitModel selectedExibit) {
+        ExibitDetailsFragment exibitDetailsFragment = new ExibitDetailsFragment();
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_id, exibitDetailsFragment, ExibitDetailsFragment.TAG).addToBackStack(null).commit();
+    }
 }

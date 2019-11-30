@@ -3,14 +3,111 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="HISTORY FRAGMENT"
-        android:textColor="@color/ColorRed"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:background="@color/color_dark_gray"/>
+        android:layout_weight="3">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/exibit_cover_view_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/history_cover"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/overlay"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="20dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerveiw_history_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Историја"
+                android:textSize="18sp"
+                android:paddingLeft="30dp"
+                android:textColor="@color/text_color_black"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/history_text_one"
+                android:textSize="16sp"
+                android:paddingLeft="30dp"
+                android:textColor="@color/text_color_black"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/history_text_two"
+                android:textSize="16sp"
+                android:paddingLeft="30dp"
+                android:textColor="@color/text_color_black"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="15dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/history_text_three"
+                android:textSize="16sp"
+                android:paddingLeft="30dp"
+                android:textColor="@color/text_color_black"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/history_text_four"
+                android:textSize="16sp"
+                android:paddingLeft="30dp"
+                android:textColor="@color/text_color_black"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="15dp"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
 
 
 </LinearLayout>
