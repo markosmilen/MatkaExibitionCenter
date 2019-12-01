@@ -3,13 +3,175 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="CONTACT FRAGMENT"
-        android:textColor="@color/color_yellow"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:background="@color/color_dark_gray"/>
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/exibit_cover_view_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/matka_map_img"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/overlay"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Локација"
+                    android:textAllCaps="true"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/text_color_black"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="ХЕЦ Матка / Кањон Матка, Општина Сарај, Скопје"
+               android:textColor="@color/text_color_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/work_hours_title_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Работно време"
+                    android:textAllCaps="true"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/months_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="април/октомври"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/text_color_black"
+                    android:layout_below="@id/work_hours_title_id"/>
+
+                <TextView
+                    android:id="@+id/days_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="секој ден освен понеделник"
+                    android:textColor="@color/text_color_black"
+                    android:layout_below="@id/months_id"/>
+
+                <TextView
+                    android:id="@+id/work_hours_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 - 15:00"
+                    android:textColor="@color/text_color_black"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/work_hours_title_id"
+                    android:layout_marginRight="30dp"/>
+
+                <TextView
+                    android:id="@+id/contact_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Контакт"
+                    android:textAllCaps="true"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@id/days_id"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/tel_num_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="072/935-105"
+                    android:textColor="@color/text_color_black"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/days_id"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingTop="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/to_matka_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="До матка"
+                    android:textAllCaps="true"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@id/contact_id"
+                    android:textColor="@color/text_color_black"/>
+
+                <TextView
+                    android:id="@+id/to_skopje_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="До Скопје"
+                    android:textAllCaps="true"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/to_matka_id"
+                    android:textColor="@color/text_color_black"/>
+
+                <ImageView
+                    android:id="@+id/contact_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/evn_logo"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/to_skopje_id"/>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
 
 </LinearLayout>
