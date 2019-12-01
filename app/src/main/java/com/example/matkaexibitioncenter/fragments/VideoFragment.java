@@ -18,11 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.matkaexibitioncenter.R;
 import com.example.matkaexibitioncenter.adapters.VideoAdapter;
+import com.example.matkaexibitioncenter.interfaces.VideoListener;
 import com.example.matkaexibitioncenter.models.ExibitModel;
 
 import java.util.ArrayList;
 
-public class VideoFragment extends Fragment {
+public class VideoFragment extends Fragment implements VideoListener {
     public static final String TAG = VideoFragment.class.getSimpleName();
     VideoView videoview;
     RecyclerView recyclerView;
@@ -42,7 +43,7 @@ public class VideoFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_videofragment_id);
 
         getVideos();
-        adapter = new VideoAdapter(getContext(), videos);
+        adapter = new VideoAdapter(getContext(), videos, this);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2, GridLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 

@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.matkaexibitioncenter.R;
+import com.example.matkaexibitioncenter.interfaces.VideoListener;
 import com.example.matkaexibitioncenter.models.ExibitModel;
 
 import java.util.ArrayList;
@@ -20,11 +21,13 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     Context context;
     ArrayList<ExibitModel> dataVideos;
     LayoutInflater inflater;
+    VideoListener listener;
 
-    public VideoAdapter(Context context, ArrayList<ExibitModel> dataVideos) {
+    public VideoAdapter(Context context, ArrayList<ExibitModel> dataVideos, VideoListener listener) {
         this.context = context;
         this.dataVideos = dataVideos;
         this.inflater = LayoutInflater.from(context);
+        this.listener = listener;
     }
 
     @NonNull
@@ -53,6 +56,12 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             super(itemView);
             image = (ImageView) itemView.findViewById(R.id.item_video_videoimg_id);
             title = (TextView) itemView.findViewById(R.id.item_video_title_id);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.openYoutube(v);
+                }
+            });
         }
     }
 }
