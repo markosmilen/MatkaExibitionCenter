@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemvideo_cardview_id"
+        android:layout_width="200dp"
+        android:layout_height="170dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_video_videoimg_id"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/exibitone"
+                android:layout_weight="3"
+                />
+
+            <TextView
+                android:id="@+id/item_video_title_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_color_black"
+                tools:text="Приказ на електро дистибутивен систем"
+                android:layout_weight="4"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
