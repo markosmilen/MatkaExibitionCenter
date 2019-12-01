@@ -43,7 +43,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:background="@color/color_white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,6 +155,28 @@
                     android:textColor="@color/text_color_black"/>
 
                 <ImageView
+                    android:id="@+id/bus_down"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_bus"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/bus_up"
+                    android:layout_toLeftOf="@id/taxi"
+                    android:layout_marginRight="30dp"/>
+
+                <ImageView
+                    android:id="@+id/plane"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_plane"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/bus_up"
+                    android:layout_toLeftOf="@id/bus_down"
+                    android:layout_marginRight="30dp"/>
+
+                <ImageView
                     android:id="@+id/contact_logo"
                     android:layout_width="50dp"
                     android:layout_height="18dp"
@@ -164,6 +187,38 @@
                     android:layout_below="@id/to_skopje_id"/>
 
 
+                <ImageView
+                    android:id="@+id/taxi"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_taxi"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/tel_num_id"
+                    android:layout_marginRight="30dp"/>
+
+                <ImageView
+                    android:id="@+id/bus_up"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_bus"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/tel_num_id"
+                    android:layout_toLeftOf="@id/taxi"
+                    android:layout_marginRight="30dp"/>
+
+                <ImageView
+                    android:id="@+id/train"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_bus"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/taxi"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"/>
 
             </RelativeLayout>
         </LinearLayout>
