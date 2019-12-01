@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.matkaexibitioncenter.R;
+import com.example.matkaexibitioncenter.interfaces.HistoryImgListener;
 import com.example.matkaexibitioncenter.models.HistoryModel;
 
 import java.util.List;
@@ -19,11 +20,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
     LayoutInflater inflater;
     List<HistoryModel> historyData;
     Context context;
+    HistoryImgListener listener;
 
-    public HistoryAdapter(List<HistoryModel> historyData, Context context) {
+    public HistoryAdapter(List<HistoryModel> historyData, Context context, HistoryImgListener listener) {
         this.historyData = historyData;
         this.context = context;
         this.inflater = LayoutInflater.from(context);
+        this.listener = listener;
     }
 
     @NonNull
