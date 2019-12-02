@@ -6,8 +6,10 @@ import android.os.Parcelable;
 
 public class ExibitModel implements Parcelable {
 
-    String title;
+    String title, information;
     int image;
+
+
 
     public ExibitModel() {
     }
@@ -15,6 +17,7 @@ public class ExibitModel implements Parcelable {
     protected ExibitModel(Parcel in) {
         title = in.readString();
         image = in.readInt();
+        information = in.readString();
     }
 
     public static final Creator<ExibitModel> CREATOR = new Creator<ExibitModel>() {
@@ -45,6 +48,14 @@ public class ExibitModel implements Parcelable {
         this.image = image;
     }
 
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -53,6 +64,7 @@ public class ExibitModel implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
+        dest.writeString(information);
         dest.writeInt(image);
     }
 }
