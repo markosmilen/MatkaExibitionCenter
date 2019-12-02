@@ -13,11 +13,12 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/exibit_cover_view_id"
+                android:id="@+id/map_img_id"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/matka_map_img"/>
+                android:src="@drawable/matka_map_img"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -34,7 +35,7 @@
                     android:layout_gravity="bottom"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@color/text_color_black"/>
+                    android:textColor="@color/text_color_black" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -196,7 +197,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="20dp"
                     android:layout_below="@id/tel_num_id"
-                    android:layout_marginRight="30dp"/>
+                    android:layout_marginRight="30dp"
+                    />
 
                 <ImageView
                     android:id="@+id/bus_up"

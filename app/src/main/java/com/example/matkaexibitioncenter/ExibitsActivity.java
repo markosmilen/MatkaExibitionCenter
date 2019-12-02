@@ -4,23 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.matkaexibitioncenter.fragments.ContactFragment;
-import com.example.matkaexibitioncenter.fragments.ExibitDetailsFragment;
 import com.example.matkaexibitioncenter.fragments.ExibitFragment;
 import com.example.matkaexibitioncenter.fragments.HistoryFragment;
 import com.example.matkaexibitioncenter.fragments.VideoFragment;
-import com.example.matkaexibitioncenter.interfaces.ExibitClickListener;
-import com.example.matkaexibitioncenter.models.ExibitModel;
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ExibitsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     BottomNavigationView bottomNavigationItemView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +54,7 @@ public class ExibitsActivity extends AppCompatActivity implements BottomNavigati
         }
         return false;
     }
+
+
 
 }

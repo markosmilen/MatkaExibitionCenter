@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     VideoView videoview;
     Button continueButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,4 +47,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 }
