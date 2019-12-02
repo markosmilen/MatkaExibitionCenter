@@ -5,4 +5,18 @@
     <string name="history_text_three">За време на Втората светска војна токму ХЕЦ Матка била еден од стратешките објекти околу која се воделе битки. Таа била цел на бомбардирање во текот на воените операции, при повекувањето на фашистичките сили. Дури имало и обид за нејзино минирање но, група партизани херојски ја одбраниле Матка. Браната на хидроцентралата Матка неколку пати го спасила и Скопје од поплави и тоа за време на големата полава во 1962 година и во 1979 кога браната задржала голерма количина на вода и придонела за спречување на поголеми катастрофи.</string>
     <string name="history_text_four">Хидроцентралата Матка денес е дел од производството на обновлива енергија на ЕВН во Македонија. Во 2008 година е направена реконструкција и е изградена комплетно нова хидроцентрала. Со изградбата на нова машинска зграда, лоцирана во непосредна близина, старата машинска зграда престана со функција, по што во 2016 година е пренаменета во едукативно-изложбен центар.</string>
     <string name="exibit_one_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Nec ultrices dui sapien eget mi proin. In hendrerit gravida rutrum quisque. Cursus euismod quis viverra nibh cras pulvinar. Tempor orci eu lobortis elementum nibh. Imperdiet nulla malesuada pellentesque elit eget. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Nisl vel pretium lectus quam id leo in vitae turpis. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Risus at ultrices mi tempus imperdiet nulla. Non quam lacus suspendisse faucibus. Duis convallis convallis tellus id interdum velit laoreet id donec. Odio facilisis mauris sit amet massa. Egestas sed sed risus pretium quam vulputate dignissim. Lacus luctus accumsan tortor posuere</string>
+    <string name="history_title">Историја</string>
+    <string name="exibit_fragment_text_title">Матка Изложбен центар</string>
+    <string name="exitbit_fragment_text">Изложбениот центар Матка е едиствен едукативен центар во Македонија што се бави со енергетски теми. Во него посетителите преку современи интерактивни методи може да научат повеќе за енергијата, нејзината историја, производство, пренос и користење.</string>
+    <string name="contact_f_location">Локација</string>
+    <string name="contact_f_working_hours">Работно време</string>
+    <string name="contact_f_contact">Контакт</string>
+    <string name="contact_f_to_matka">До матка</string>
+    <string name="contact_f_to_skopje">До Скопје</string>
+    <string name="contact_f_adress">ХЕЦ Матка / Кањон Матка, Општина Сарај, Скопје</string>
+    <string name="contact_f_working_h_range">10:00 - 15:00</string>
+    <string name="contact_f_months">април/октомври</string>
+    <string name="contact_f_days">секој ден освен понеделник</string>
+    <string name="button_continue">ПРОДОЛЖИ</string>
+    <string name="video_f_title_text">Видеа</string>
 </resources>

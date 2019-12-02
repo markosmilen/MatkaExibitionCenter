@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-
         android:orientation="horizontal"
         android:background="@color/color_overlaybacground"
         android:padding="10dp">
@@ -45,7 +44,7 @@
             android:layout_marginBottom="100dp"
             android:textSize="15sp"
             android:textColor="@color/color_white"
-            android:text="ПРОДОЛЖИ"
+            android:text="@string/button_continue"
             android:onClick="learnMore"/>
 
         <!--        <TextView

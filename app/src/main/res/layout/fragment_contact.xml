@@ -30,12 +30,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Локација"
-                    android:textAllCaps="true"
-                    android:layout_gravity="bottom"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/text_color_black" />
+                    android:text="@string/contact_f_location"
+                    style="@style/TitleTextStyle"
+                    android:layout_gravity="bottom" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -57,7 +54,7 @@
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="ХЕЦ Матка / Кањон Матка, Општина Сарај, Скопје"
+               android:text="@string/contact_f_adress"
                android:textColor="@color/text_color_black"/>
 
             <RelativeLayout
@@ -68,19 +65,16 @@
                     android:id="@+id/work_hours_title_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Работно време"
-                    android:textAllCaps="true"
+                    android:text="@string/contact_f_working_hours"
+                    style="@style/TitleTextStyle"
                     android:layout_gravity="bottom"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="@color/text_color_black"/>
+                    android:layout_marginTop="25dp"/>
 
                 <TextView
                     android:id="@+id/months_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="април/октомври"
+                    android:text="@string/contact_f_months"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/text_color_black"
                     android:layout_below="@id/work_hours_title_id"/>
@@ -89,7 +83,7 @@
                     android:id="@+id/days_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="секој ден освен понеделник"
+                    android:text="@string/contact_f_days"
                     android:textColor="@color/text_color_black"
                     android:layout_below="@id/months_id"/>
 
@@ -97,7 +91,7 @@
                     android:id="@+id/work_hours_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10:00 - 15:00"
+                    android:text="@string/contact_f_working_h_range"
                     android:textColor="@color/text_color_black"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/work_hours_title_id"
@@ -107,14 +101,11 @@
                     android:id="@+id/contact_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Контакт"
-                    android:textAllCaps="true"
+                    android:text="@string/contact_f_contact"
                     android:layout_gravity="bottom"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
+                    style="@style/TitleTextStyle"
                     android:layout_marginTop="25dp"
-                    android:layout_below="@id/days_id"
-                    android:textColor="@color/text_color_black"/>
+                    android:layout_below="@id/days_id"/>
 
                 <TextView
                     android:id="@+id/tel_num_id"
@@ -133,27 +124,21 @@
                     android:id="@+id/to_matka_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="До матка"
-                    android:textAllCaps="true"
+                    android:text="@string/contact_f_to_matka"
                     android:layout_gravity="bottom"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
+                    style="@style/TitleTextStyle"
                     android:layout_marginTop="25dp"
-                    android:layout_below="@id/contact_id"
-                    android:textColor="@color/text_color_black"/>
+                    android:layout_below="@id/contact_id"/>
 
                 <TextView
                     android:id="@+id/to_skopje_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="До Скопје"
-                    android:textAllCaps="true"
+                    android:text="@string/contact_f_to_skopje"
+                    style="@style/TitleTextStyle"
                     android:layout_gravity="bottom"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
                     android:layout_marginTop="30dp"
-                    android:layout_below="@id/to_matka_id"
-                    android:textColor="@color/text_color_black"/>
+                    android:layout_below="@id/to_matka_id"/>
 
                 <ImageView
                     android:id="@+id/bus_down"

@@ -37,12 +37,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    tools:text="Матка Изложбен центар"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
+                    tools:text="@string/exibit_fragment_text_title"
+                    style="@style/TitleTextStyle"
                     android:paddingBottom="10dp"
-
                     android:textColor="@color/text_color_black"/>
 
             </LinearLayout>
@@ -67,11 +64,10 @@
                 android:id="@+id/exibitdetail_text_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Изложбениот центар Матка е едиствен едукативен центар во Македонија што се бави со енергетски теми. Во него посетителите преку современи интерактивни методи може да научат повеќе за енергијата, нејзината историја, производство, пренос и користење."
-                android:textSize="16sp"
+                tools:text="@string/exitbit_fragment_text"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:textColor="@color/text_color_black"
+                style="@style/InfoTextStyle"
                 android:paddingBottom="10dp"/>
 
         </LinearLayout>

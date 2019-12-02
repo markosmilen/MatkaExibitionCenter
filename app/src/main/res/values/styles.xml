@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TitleTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="InfoTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ItemsTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
 </resources>
