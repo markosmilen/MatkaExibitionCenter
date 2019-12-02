@@ -37,18 +37,22 @@ public class ExibitsActivity extends AppCompatActivity implements BottomNavigati
         switch (menuItem.getItemId()){
             case R.id.bn_exibits_id:
                 ft.replace(R.id.frame_layout_id, ExibitFragment.newInstance(), ExibitFragment.TAG);
+                ft.addToBackStack(null);
                 ft.commit();
                 return true;
             case R.id.bn_videos_id:
                 ft.replace(R.id.frame_layout_id, VideoFragment.newInstance(), VideoFragment.TAG);
+                ft.addToBackStack(null);
                 ft.commit();
                 return true;
             case R.id.bn_history_id:
                 ft.replace(R.id.frame_layout_id, HistoryFragment.newInstance(), HistoryFragment.TAG);
+                ft.addToBackStack(null);
                 ft.commit();
                 return true;
             case R.id.bn_contact_id:
                 ft.replace(R.id.frame_layout_id, ContactFragment.newInstance(), ContactFragment.TAG);
+                ft.addToBackStack(null);
                 ft.commit();
                 return true;
         }

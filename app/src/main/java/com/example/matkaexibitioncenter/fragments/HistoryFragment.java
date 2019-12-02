@@ -41,6 +41,7 @@ public class HistoryFragment extends Fragment implements HistoryImgListener{
         adapterHorizontal = new HistoryAdapter(list, getActivity(), this);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView2.setAdapter(adapterHorizontal);
+
         return view;
     }
 
