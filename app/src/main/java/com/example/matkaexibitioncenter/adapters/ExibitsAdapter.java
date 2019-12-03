@@ -12,20 +12,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.matkaexibitioncenter.R;
 import com.example.matkaexibitioncenter.interfaces.ExibitClickListener;
+import com.example.matkaexibitioncenter.models.ExibitJsonModel;
+import com.example.matkaexibitioncenter.models.ExibitJsonModeltwo;
 import com.example.matkaexibitioncenter.models.ExibitModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ExibitsAdapter extends RecyclerView.Adapter<ExibitsAdapter.ExibitsViewHolder> {
 
     Context context;
     LayoutInflater inflater;
-    ArrayList<ExibitModel> exibits;
     ExibitClickListener listener;
+    ArrayList<ExibitJsonModeltwo> exibitlist;
 
-    public ExibitsAdapter(Context context, ArrayList<ExibitModel> exibits, ExibitClickListener listener) {
+
+    public ExibitsAdapter(Context context, ArrayList<ExibitJsonModeltwo> exibits, ExibitClickListener listener) {
         this.context = context;
-        this.exibits = exibits;
+        this.exibitlist = exibits;
         this.inflater = LayoutInflater.from(context);
         this.listener = listener;
     }
@@ -39,14 +43,19 @@ public class ExibitsAdapter extends RecyclerView.Adapter<ExibitsAdapter.ExibitsV
 
     @Override
     public void onBindViewHolder(@NonNull ExibitsViewHolder holder, int position) {
-        ExibitModel exibitModel = exibits.get(position);
-        holder.exibitTitle.setText(exibitModel.getTitle());
-        holder.exibitimage.setImageResource(exibitModel.getImage());
+      ///  ExibitModel exibitModel = exibits.get(position);
+        ExibitJsonModeltwo exibit = exibitlist.get(position);
+
+        String mDrawableName = exibit.getImages().get(0);
+        int resID = context.getResources().getIdentifier(mDrawableName , "drawable", context.getPackageName());
+
+        holder.exibitTitle.setText(exibit.getTitle());
+        holder.exibitimage.setImageResource(resID);
     }
 
     @Override
     public int getItemCount() {
-        return exibits.size();
+        return exibitlist.size();
     }
 
     public class ExibitsViewHolder extends RecyclerView.ViewHolder {
@@ -62,7 +71,7 @@ public class ExibitsAdapter extends RecyclerView.Adapter<ExibitsAdapter.ExibitsV
                 @Override
                 public void onClick(View v) {
                     if(listener != null){
-                        listener.onExibitClicked(exibits.get(getAdapterPosition()));
+                        listener.onExibitClicked(exibitlist.get(getAdapterPosition()));
                     }
                 }
             });
