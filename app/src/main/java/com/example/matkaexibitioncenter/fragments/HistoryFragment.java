@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +16,8 @@ import com.example.matkaexibitioncenter.R;
 import com.example.matkaexibitioncenter.adapters.HistoryAdapter;
 import com.example.matkaexibitioncenter.interfaces.HistoryImgListener;
 import com.example.matkaexibitioncenter.models.HistoryModel;
+import com.stfalcon.imageviewer.StfalconImageViewer;
+import com.stfalcon.imageviewer.loader.ImageLoader;
 
 import java.util.ArrayList;
 
@@ -64,7 +66,13 @@ public class HistoryFragment extends Fragment implements HistoryImgListener{
     }
 
     @Override
-    public void onHistoryImgClicked() {
-
+    public void onHistoryImgClicked(HistoryModel historyModel) {
+        new StfalconImageViewer.Builder<>(getActivity(), list, new ImageLoader<HistoryModel>() {
+            @Override
+            public void loadImage(ImageView imageView, HistoryModel drawableRes) {
+                imageView.setImageResource(drawableRes.getImage());
+                imageView.setBackgroundColor(getResources().getColor(R.color.text_color_black));
+            }
+        }).show();
     }
 }
