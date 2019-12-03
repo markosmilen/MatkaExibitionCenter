@@ -58,7 +58,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             historyPic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.onHistoryImgClicked(historyData.get(getAdapterPosition()));
+                    listener.onHistoryImgClicked(historyData.get(getAdapterPosition()), getAdapterPosition());
                 }
             });
         }

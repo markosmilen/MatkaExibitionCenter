@@ -4,5 +4,5 @@ import com.example.matkaexibitioncenter.models.HistoryModel;
 
 public interface HistoryImgListener {
 
-    void onHistoryImgClicked(HistoryModel historyModel);
+    void onHistoryImgClicked(HistoryModel historyModel, int position);
 }

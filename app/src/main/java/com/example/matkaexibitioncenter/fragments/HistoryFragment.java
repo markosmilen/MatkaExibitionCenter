@@ -66,13 +66,13 @@ public class HistoryFragment extends Fragment implements HistoryImgListener{
     }
 
     @Override
-    public void onHistoryImgClicked(HistoryModel historyModel) {
+    public void onHistoryImgClicked(HistoryModel historyModel, int position) {
         new StfalconImageViewer.Builder<>(getActivity(), list, new ImageLoader<HistoryModel>() {
             @Override
             public void loadImage(ImageView imageView, HistoryModel drawableRes) {
                 imageView.setImageResource(drawableRes.getImage());
                 imageView.setBackgroundColor(getResources().getColor(R.color.text_color_black));
             }
-        }).show();
+        }).withStartPosition(position).show();
     }
 }
