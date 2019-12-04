@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.matkaexibitioncenter.R;
+import com.example.matkaexibitioncenter.models.ExibitJsonModeltwo;
 import com.example.matkaexibitioncenter.models.ExibitModel;
 
 import org.w3c.dom.Text;
@@ -38,10 +39,14 @@ public class ExibitDetailsFragment extends Fragment {
         exibit_cover = (ImageView) view.findViewById(R.id.exibitdetails_cover_view_id);
 
         Bundle bundle = getArguments();
-        ExibitModel exibitModel = (ExibitModel) bundle.getParcelable("EXIBIT");
+        ExibitJsonModeltwo exibitModel = (ExibitJsonModeltwo) bundle.getParcelable("EXIBIT");
         exibit_title.setText(exibitModel.getTitle());
-        exibit_information.setText(exibitModel.getInformation());
-        exibit_cover.setImageResource(exibitModel.getImage());
+        exibit_information.setText(exibitModel.getContent());
+
+        String mDrawableName = exibitModel.getImages().get(0);
+        int resID = getActivity().getResources().getIdentifier(mDrawableName , "drawable", getActivity().getPackageName());
+        exibit_cover.setImageResource(resID);
+
 
         return view;
     }
