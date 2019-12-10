@@ -9,21 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:elevation="5dp">
+        android:elevation="5dp"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <VideoView
-                android:id="@+id/videocover_videofragment_id"
+            <ImageView
+                android:id="@+id/imgcover_videofragment_id"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="center"/>
+                android:background="@drawable/cover_video_fragment"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:onClick="onCoverImageClicked"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 
 public class VideoFragment extends Fragment implements VideoListener {
     public static final String TAG = VideoFragment.class.getSimpleName();
-    VideoView videoview;
+    ImageView coverImage;
     RecyclerView recyclerView;
     VideoAdapter adapter;
     ArrayList<ExibitModel> videos = new ArrayList<>();
@@ -39,7 +40,7 @@ public class VideoFragment extends Fragment implements VideoListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_viceo, container, false);
-        videoview = (VideoView) view.findViewById(R.id.videocover_videofragment_id);
+        coverImage = (ImageView) view.findViewById(R.id.imgcover_videofragment_id);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_videofragment_id);
 
         getVideos();
@@ -47,17 +48,17 @@ public class VideoFragment extends Fragment implements VideoListener {
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2, GridLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 
-        Uri uri = Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.videoplayback);
-        videoview.setVideoURI(uri);
-        videoview.start();
-
-        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        coverImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-                mp.setVolume(0,0);
+            public void onClick(View v) {
+                String videoId = "Y0roxYTwLwQ";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+videoId));
+                intent.putExtra("VIDEO_ID", videoId);
+                intent.putExtra("force_fullscreen",true);
+                startActivity(intent);
             }
         });
+
         return view;
 
 
@@ -110,8 +111,34 @@ public class VideoFragment extends Fragment implements VideoListener {
 
 
     }
-    public void openYoutube(View view) {
-        String videoId = "ui2-ca-Cr7o";
+    public void openYoutube(View view, int position) {
+       String videoId = null;
+       switch (position){
+            case 0:
+                videoId = "ui2-ca-Cr7o";
+                break;
+            case 1:
+                videoId = "g28xG1R15Lo";
+                break;
+            case 2:
+                videoId = "ci93H59m2IY";
+                break;
+            case 3:
+                videoId = "u8Yr9vqyU_8";
+                break;
+            case 4:
+                videoId = "mXEulg0a1Yk";
+                break;
+            case 5:
+                videoId = "Y0roxYTwLwQ";
+                break;
+            case 6:
+                videoId = "qwkQVShCklw";
+                break;
+            case 7:
+                videoId = "ohWQvr7y93k";
+                break;
+        }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+videoId));
         intent.putExtra("VIDEO_ID", videoId);
         intent.putExtra("force_fullscreen",true);
